@@ -54,10 +54,10 @@ docs/
 ├── intro.md                 # 介绍页面
 ├── tutorial-basics/         # 基础教程目录
 │   ├── create-a-page.md
-│   └── congratulations.md
-└── tutorial-extras/         # 高级教程目录
-    ├── manage-docs-versions.md
-    └── translate-your-site.md
+│   └── markdown-features.mdx
+└── advanced/                # 高级功能目录
+    ├── theming.md
+    └── deployment.md
 ```
 
 ### 添加图片和资源
@@ -67,36 +67,6 @@ docs/
 
 ```markdown
 ![图片描述](/img/your-image.png)
-```
-
-## 📝 博客功能
-
-### 创建博客文章
-
-1. 在 `blog/` 目录下创建文件，命名格式：`YYYY-MM-DD-title.md`
-2. 添加 frontmatter：
-
-```markdown
----
-title: 博客标题
-authors: [author1, author2]
-tags: [tag1, tag2]
-description: 博客描述
----
-
-博客内容...
-```
-
-### 作者配置
-
-在 `blog/authors.yml` 中配置作者信息：
-
-```yaml
-author1:
-  name: 作者姓名
-  title: 作者头衔
-  url: https://github.com/username
-  image_url: https://github.com/username.png
 ```
 
 ## 🎨 样式自定义
@@ -222,7 +192,6 @@ pnpm write-translations
 
 ```
 oadin-docs/
-├── blog/                    # 博客文章
 ├── docs/                    # 文档内容
 ├── src/                     # 源代码
 │   ├── css/                # 样式文件
@@ -254,6 +223,10 @@ pnpm clear && pnpm build
 ### 3. 样式不生效
 
 检查 `src/css/custom.css` 文件是否正确配置在 `docusaurus.config.ts` 中。
+
+### 4. 文档路径问题
+
+确保文档文件的路径和 `sidebars.ts` 中的配置一致。
 
 ## 📚 相关资源
 
