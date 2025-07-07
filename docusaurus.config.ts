@@ -2,35 +2,34 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+// 此代码运行在 Node.js 环境中 - 不要在此使用客户端代码（浏览器 API、JSX...）
 
 const config: Config = {
   title: 'Oadin Docs',
   tagline: '基于 Docusaurus 的现代化文档系统',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  // 未来功能标志，参见 https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true, // 提高与即将推出的 Docusaurus v4 的兼容性
   },
 
-  // Set the production url of your site here
-  url: 'https://your-oadin-docs.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  // 在此处设置站点的生产环境 URL
+  url: 'https://DigitalChinaOpenSource.github.io',
+  // 设置站点服务的 /<baseUrl>/ 路径名
+  // 对于 GitHub pages 部署，通常是 '/<projectName>/'
+  baseUrl: '/oadin-docs/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-org', // Usually your GitHub org/user name.
-  projectName: 'oadin-docs', // Usually your repo name.
+  // GitHub pages 部署配置
+  // 如果你不使用 GitHub pages，则不需要这些配置
+  organizationName: 'DigitalChinaOpenSource', // 通常是你的 GitHub 组织/用户名
+  projectName: 'oadin-docs', // 通常是你的仓库名
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // 即使你不使用国际化，也可以使用此字段设置有用的元数据，如 html lang
+  // 例如，如果你的站点是中文的，你可能想将 "en" 替换为 "zh-Hans"
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -42,25 +41,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // 请将此更改为你的仓库地址
+          // 移除此配置可移除"编辑此页面"链接
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/DigitalChinaOpenSource/oadin-docs/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -70,13 +54,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    // 替换为你的项目的社交卡片
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Oadin Docs',
       logo: {
         alt: 'Oadin Docs Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
+        srcDark: 'img/logo.png', // 深色主题下的 Logo
       },
       items: [
         {
@@ -85,9 +70,8 @@ const config: Config = {
           position: 'left',
           label: '文档',
         },
-        {to: '/blog', label: '博客', position: 'left'},
         {
-          href: 'https://github.com/your-org/oadin-docs',
+          href: 'https://github.com/DigitalChinaOpenSource/oadin-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -97,16 +81,16 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: 'Tutorial',
+              label: '快速开始',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '社区',
           items: [
             {
               label: 'Stack Overflow',
@@ -123,20 +107,16 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: '更多',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/DigitalChinaOpenSource/oadin-docs',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Oadin Docs Project. Built with Docusaurus.`,
+      copyright: `版权所有 © ${new Date().getFullYear()} Oadin Docs 项目。使用 Docusaurus 构建。`,
     },
     prism: {
       theme: prismThemes.github,

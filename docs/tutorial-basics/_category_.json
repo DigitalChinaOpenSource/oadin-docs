@@ -1,8 +1,8 @@
 {
-  "label": "Tutorial - Basics",
+  "label": "使用指南",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "5 分钟学会 Docusaurus 的基本概念和使用方法。"
   }
 }
