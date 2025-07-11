@@ -537,10 +537,11 @@ Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 
 | api_flavor          | API 风格                   | ollama/openai/...           |
 | model_name          | 模型名称                   | llama2/deepseek-r1:8b       |
 | auth_type           | 鉴权类型                   | none/apikey/token/credentials|
-| auth_key            | 鉴权密钥                   | your_api_key                 | method              | HTTP 方法                    | POST/GET                     |
+| auth_key            | 鉴权密钥                   | your_api_key                 |
+| method              | HTTP 方法                  | POST/GET                     |
 | url                 | 服务地址                   | http://localhost:11434/...   |
 | stream              | 是否流式                   | true/false                   |
-| messages            | 聊天消息数组               | [{role: "user", ...}]        |
+| messages            | 聊天消息数组               | `[{role: "user", ...}]`        |
 | input/prompt        | 输入内容                   | "你好"/"一只猫"               |
 
 ## 5. 进阶用法与最佳实践
@@ -614,11 +615,11 @@ Oadin 支持多轮对话，`messages` 参数可传递历史消息，实现上下
 
 | 问题类型 | 症状 | 解决方案 |
 |---------|------|---------|
-| **服务未启动** | 连接被拒绝、超时 | 1. 确认 `oadin server start` 已运行<br>2. 检查进程：`ps aux \| grep oadin`<br>3. 重启服务：`oadin server restart` |
-| **端口冲突** | Address already in use | 1. 检查 16688 端口占用：`netstat -tulpn \| grep 16688`<br>2. 修改配置文件端口<br>3. 终止冲突进程 |
-| **模型下载失败** | 网络错误、下载中断 | 1. 检查网络连接<br>2. 验证 Provider 配置<br>3. 重试下载或使用流式下载 |
-| **认证失败** | 401/403 错误 | 1. 检查 `auth_key` 配置<br>2. 验证 `auth_type` 设置<br>3. 确认 API 密钥有效性 |
-| **模型不存在** | 404 错误 | 1. 检查模型名称拼写<br>2. 确认模型已安装<br>3. 查看可用模型列表 |
+| **服务未启动** | 连接被拒绝、超时 | 1. 确认 `oadin server start` 已运行<br />2. 检查进程：`ps aux | grep oadin`<br />3. 重启服务：`oadin server restart` |
+| **端口冲突** | Address already in use | 1. 检查 16688 端口占用：`netstat -tulpn | grep 16688`<br />2. 修改配置文件端口<br />3. 终止冲突进程 |
+| **模型下载失败** | 网络错误、下载中断 | 1. 检查网络连接<br />2. 验证 Provider 配置<br />3. 重试下载或使用流式下载 |
+| **认证失败** | 401/403 错误 | 1. 检查 `auth_key` 配置<br />2. 验证 `auth_type` 设置<br />3. 确认 API 密钥有效性 |
+| **模型不存在** | 404 错误 | 1. 检查模型名称拼写<br />2. 确认模型已安装<br />3. 查看可用模型列表 |
 
 ---
 

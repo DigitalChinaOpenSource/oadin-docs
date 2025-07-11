@@ -454,11 +454,11 @@ oadin delete model <model_name> --provider <provider_name>
 
 | 问题 | 可能的原因 | 解决方案 |
 |------|-----------|---------|
-| **无法连接 Oadin 服务** | - 服务未启动<br>- 端口被占用<br>- 防火墙阻止 | 1. 检查服务状态: `curl http://localhost:16688`<br>2. 检查端口占用: `netstat -ano \| findstr 16688`<br>3. 检查防火墙设置 |
-| **模型下载失败** | - 网络问题<br>- 磁盘空间不足<br>- Ollama未运行 | 1. 检查网络连接<br>2. 确认磁盘空间充足<br>3. 确认 Ollama 运行状态<br>4. 尝试下载较小的模型 |
-| **找不到 oadin 命令** | - 未添加到环境变量<br>- 安装路径错误 | 1. 确认安装路径<br>2. 将安装目录添加到 PATH<br>3. 使用完整路径执行: `C:\path\to\oadin.exe` |
-| **命令与文档不符** | - 软件版本差异<br>- 文档更新滞后 | 1. 使用 `oadin --help` 查看当前可用命令<br>2. 使用 `oadin <command> --help` 查看详细用法<br>3. 使用 `oadin get services` 查看可用服务 |
-| **服务调用失败** | - 服务未安装<br>- 模型未下载<br>- API格式错误 | 1. 检查服务安装状态: `oadin get services`<br>2. 检查模型是否可用: `oadin get models`<br>3. 检查API请求格式是否正确 |
+| **无法连接 Oadin 服务** | - 服务未启动<br />- 端口被占用<br />- 防火墙阻止 | 1. 检查服务状态: `curl http://localhost:16688`<br />2. 检查端口占用: `netstat -ano \| findstr 16688`<br />3. 检查防火墙设置 |
+| **模型下载失败** | - 网络问题<br />- 磁盘空间不足<br />- Ollama未运行 | 1. 检查网络连接<br />2. 确认磁盘空间充足<br />3. 确认 Ollama 运行状态<br />4. 尝试下载较小的模型 |
+| **找不到 oadin 命令** | - 未添加到环境变量<br />- 安装路径错误 | 1. 确认安装路径<br />2. 将安装目录添加到 PATH<br />3. 使用完整路径执行: `C:\path\to\oadin.exe` |
+| **命令与文档不符** | - 软件版本差异<br />- 文档更新滞后 | 1. 使用 `oadin --help` 查看当前可用命令<br />2. 使用 `oadin <command> --help` 查看详细用法<br />3. 使用 `oadin get services` 查看可用服务 |
+| **服务调用失败** | - 服务未安装<br />- 模型未下载<br />- API格式错误 | 1. 检查服务安装状态: `oadin get services`<br />2. 检查模型是否可用: `oadin get models`<br />3. 检查API请求格式是否正确 |
 
 > **提示**：如遇到其他问题，可使用 `--verbose` 或 `-v` 参数启动服务以获取详细日志，例如 `oadin start -v`。
 
@@ -476,13 +476,13 @@ oadin delete model <model_name> --provider <provider_name>
 - 尝试配置更多的模型和服务
 - 探索混合调度策略的优势
 - 将 Oadin 集成到您的应用中
-- 参考完整的 [SDK 文档](./SDK.md) 了解更多高级功能
+- 参考完整的 [SDK 文档](./sdk-guide.md) 了解更多高级功能
 
 ### 🔗 其他资源
 
-- [Oadin SDK 指南](./SDK.md)
-- [安全指南](./Security.md)
-- [高级用法](./Usage.md)
+- [Oadin SDK 指南](./sdk-guide.md)
+- 安全指南
+- 高级用法
 - [GitHub 仓库](https://github.com/DigitalChinaOpenSource/oadin)
 
 ---
