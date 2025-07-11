@@ -27,6 +27,9 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  
+  // 配置路由重定向，将首页直接跳转到文档页面
+
 
   // 即使你不使用国际化，也可以使用此字段设置有用的元数据，如 html lang
   // 例如，如果你的站点是中文的，你可能想将 "en" 替换为 "zh-Hans"
@@ -46,10 +49,30 @@ const config: Config = {
           editUrl:
             'https://github.com/DigitalChinaOpenSource/oadin-docs/tree/main/',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en", "zh"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchBarShortcut: true,
+        searchBarShortcutHint: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: "/docs",
+        searchBarPosition: "right"
+      },
     ],
   ],
 
