@@ -39,13 +39,8 @@
 #### 方式一：直接下载
 
 ```bash
-# 下载 Oadin 可执行文件
-
-# Windows 用户
-curl -o oadin.exe http://10.3.70.145:32018/repository/raw-hosted/intel-ai-pc/oadin/releases/win/oadin-installer-latest.exe
-
-# Mac 用户
-curl -o oadin-installer-latest.pkg http://10.3.70.145:32018/repository/raw-hosted/intel-ai-pc/oadin/releases/mac/oadin-installer-latest.pkg
+# 请访问以下网址下载适合您操作系统的 Oadin 版本：
+# 网址：http://oadin.dcclouds.com/
 
 # 添加到环境变量 (可选但推荐)
 # 将下载目录添加到系统 PATH 中

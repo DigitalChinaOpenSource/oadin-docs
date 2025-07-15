@@ -241,7 +241,7 @@ Console.WriteLine(generateResult);
 // embed
 var embedRequest = new {
     model = "nomic-embed-text",
-    input = new[] { "二彪子", "踹皮" }
+    input = new[] { "蓝色", "绿色" }
 };
 var embedResult = await client.EmbedAsync(embedRequest);
 Console.WriteLine(embedResult);
@@ -249,7 +249,7 @@ Console.WriteLine(embedResult);
 // text-to-image
 var t2iRequest = new {
     model = "wanx2.1-t2i-turbo",
-    prompt = "喜欢玩埃德加蹲草里攒大招的小学生"
+    prompt = "草地上的小猫"
 };
 var t2iResult = await client.TextToImageAsync(t2iRequest);
 Console.WriteLine(t2iResult);
