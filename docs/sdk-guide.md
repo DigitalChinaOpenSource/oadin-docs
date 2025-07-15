@@ -5,20 +5,14 @@
 ## 📑 目录
 
 - [🟦 DotnetLib（C#）](#dotnetlibc)
-  - [� 安装本地 NuGet 包](#安装本地-nuget-包)
+  - [📦 安装本地 NuGet 包](#安装本地-nuget-包)
   - [🛠️ 基本用法](#基本用法)
-- [�🟩 NodeLib（Node.js）](#nodelibnodejs)
+- [🟩 NodeLib（Node.js）](#nodelibnodejs)
   - [📦 安装](#安装)
   - [🛠️ 基本用法](#基本用法-1)
 - [🧩 进阶功能](#进阶功能)
-- [🌟 常见 API 示例](#常见-api-示oadin.CancelInstallModel(cancelData).then(console.log);
-
-// 卸载模型
-oadin.DeleteModel(modelData).then(console.log);
-
-// ============ 4. 服务提供商管理 ============
-
-// 查看服务提供商[📚 更多示例与高级用法](#更多示例与高级用法)
+- [🌟 常见 API 示例](#常见-api-示例)
+- [📚 更多示例与高级用法](#更多示例与高级用法)
 
 # 🟦 DotnetLib（C#）
 
