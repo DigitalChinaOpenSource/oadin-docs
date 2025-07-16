@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://DigitalChinaOpenSource.github.io',
   // 设置站点服务的 /<baseUrl>/ 路径名
   // 对于 GitHub pages 部署，通常是 '/<projectName>/'
-  baseUrl: '/oadin-docs/',
+  baseUrl: '/',
 
   // GitHub pages 部署配置
   // 如果你不使用 GitHub pages，则不需要这些配置
@@ -48,12 +48,29 @@ const config: Config = {
           // 移除此配置可移除"编辑此页面"链接
           editUrl:
             'https://github.com/DigitalChinaOpenSource/oadin-docs/tree/main/',
+          routeBasePath: 'docs',
+          path: 'docs',
         },
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        // 将 /docs 路径重定向到 /docs/intro
+        redirects: [
+          {
+            from: '/docs',
+            to: '/docs/intro',
+          },
+        ],
+      },
     ],
   ],
 
@@ -80,7 +97,7 @@ const config: Config = {
     // 替换为你的项目的社交卡片
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Oadin Docs',
+      title: 'Oadin文档中心',
       logo: {
         alt: 'Oadin Docs Logo',
         src: 'img/logo.png',
@@ -139,13 +156,14 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `版权所有 © ${new Date().getFullYear()} Oadin Docs 项目。使用 Docusaurus 构建。`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+
 };
 
 export default config;
