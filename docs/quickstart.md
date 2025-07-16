@@ -62,10 +62,7 @@ make build-all
 ### ✅ 2. 启动／停止服务
 
 ```bash
-# 前台启动 Oadin 服务
-oadin start
-
-# 后台启动（Daemon 模式）
+# 启动 Oadin 服务
 oadin start -d
 ```
 
@@ -473,12 +470,4 @@ oadin delete model <model_name> --provider <provider_name>
 - 将 Oadin 集成到您的应用中
 - 参考完整的 [SDK 文档](./sdk-guide.md) 了解更多高级功能
 
-### 🔗 其他资源
-
-- [Oadin SDK 指南](./sdk-guide.md)
-- 安全指南
-- 高级用法
-- [GitHub 仓库](https://github.com/DigitalChinaOpenSource/oadin)
-
 ---
-

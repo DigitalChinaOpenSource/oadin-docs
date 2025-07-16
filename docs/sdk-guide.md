@@ -1,22 +1,22 @@
-# 🚀 Oadin SDK 使用说明
+# Oadin SDK 使用说明
 
-> 📚 本文档介绍如何在 .NET（C#）和 Node.js 项目中集成和使用 Oadin（奥丁模型框架）SDK。
+> 本文档介绍如何在 .NET（C#）和 Node.js 项目中集成和使用 Oadin（奥丁模型框架）SDK。
 
-## 📑 目录
+## 目录
 
-- [🟦 DotnetLib（C#）](#dotnetlibc)
-  - [📦 安装本地 NuGet 包](#安装本地-nuget-包)
-  - [🛠️ 基本用法](#基本用法)
-- [🟩 NodeLib（Node.js）](#nodelibnodejs)
-  - [📦 安装](#安装)
-  - [🛠️ 基本用法](#基本用法-1)
-- [🧩 进阶功能](#进阶功能)
-- [🌟 常见 API 示例](#常见-api-示例)
-- [📚 更多示例与高级用法](#更多示例与高级用法)
+- [DotnetLib（C#）](#dotnetlibc)
+  - [安装本地 NuGet 包](#安装本地-nuget-包)
+  - [基本用法](#基本用法)
+- [NodeLib（Node.js）](#nodelibnodejs)
+  - [安装](#安装)
+  - [基本用法](#基本用法-1)
+- [进阶功能](#进阶功能)
+- [常见 API 示例](#常见-api-示例)
+- [更多示例与高级用法](#更多示例与高级用法)
 
-# 🟦 DotnetLib（C#）
+# DotnetLib（C#）
 
-### 📦 安装本地 NuGet 包
+### 安装本地 NuGet 包
 
 1. 打包 NuGet 包
    ```bash
@@ -261,9 +261,9 @@ Console.WriteLine($"Oadin 已下载: {isExisted}");
 
 ---
 
-# 🟩 NodeLib（Node.js）
+# NodeLib（Node.js）
 
-### 📦 安装
+### 安装
 
 在 Node 项目中安装本地 tgz 包：
 
@@ -271,7 +271,7 @@ Console.WriteLine($"Oadin 已下载: {isExisted}");
 npm install oadin-lib-1.2.67.tgz
 ```
 
-### 🛠️ 基本用法
+### 基本用法
 
 以下示例展示了 Oadin Node.js SDK 的完整使用流程，从初始化到各种 AI 服务的调用：
 
@@ -454,7 +454,7 @@ oadin.TextToImage(t2iData).then(console.log);
 
 ---
 
-# 🧩 进阶功能
+# 进阶功能
 
 Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 服务。以下为主要进阶能力及用法示例：
 
@@ -547,11 +547,11 @@ Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 
 
 ---
 
-# 🌟 常见 API 示例
+# 常见 API 示例
 
-### ⚡ 安装服务
+### 安装服务
 
-#### 🟦 C# 示例
+#### C# 示例
 ```csharp
 var requestData = new {
     service_name = "chat",
@@ -562,7 +562,7 @@ var requestData = new {
 var result = await client.InstallServiceAsync(requestData);
 ```
 
-#### 🟩 Node.js 示例
+#### Node.js 示例
 ```javascript
 const data = {
     service_name: "chat",
@@ -573,9 +573,9 @@ const data = {
 oadin.CreateService(data).then(console.log);
 ```
 
-### 💬 聊天服务调用
+### 聊天服务调用
 
-#### 🌐 HTTP API 示例
+#### HTTP API 示例
 ```http
 POST http://127.0.0.1:16688/oadin/v0.2/services/chat
 Content-Type: application/json
@@ -594,7 +594,7 @@ Content-Type: application/json
 
 ---
 
-## 📚 更多示例与高级用法
+## 更多示例与高级用法
 
 ### 1. 多轮对话与上下文管理
 Oadin 支持多轮对话，`messages` 参数可传递历史消息，实现上下文连续。
@@ -621,8 +621,8 @@ Oadin 支持多轮对话，`messages` 参数可传递历史消息，实现上下
 
 如需更详细的接口参数、进阶用法等，请参考本 SDK 文档前述章节，或通过以下方式联系技术支持：
 
-- 📧 **邮箱支持**：提交详细问题描述和错误日志
-- 💬 **在线文档**：查看最新API参考和示例  
-- 🐛 **问题反馈**：报告 Bug 或提出功能建议
+- **邮箱支持**：提交详细问题描述和错误日志
+- **在线文档**：查看最新API参考和示例  
+- **问题反馈**：报告 Bug 或提出功能建议
 
-> 💡 **提示**：报告问题时，请提供 Oadin 版本号、操作系统、错误日志等信息，以便快速定位和解决问题。
+> **提示**：报告问题时，请提供 Oadin 版本号、操作系统、错误日志等信息，以便快速定位和解决问题。
