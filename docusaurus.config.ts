@@ -63,11 +63,11 @@ const config: Config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        // 将 /docs 路径重定向到 /docs/intro
+        // 将 /docs 路径重定向到 /docs/build-deployment
         redirects: [
           {
             from: '/docs',
-            to: '/docs/intro',
+            to: '/docs/build-deployment',
           },
         ],
       },
@@ -125,7 +125,7 @@ const config: Config = {
           items: [
             {
               label: '快速开始',
-              to: '/docs/intro',
+              to: '/docs/build-deployment',
             },
           ],
         },
