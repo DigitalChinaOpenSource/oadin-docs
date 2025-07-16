@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://DigitalChinaOpenSource.github.io',
   // 设置站点服务的 /<baseUrl>/ 路径名
   // 对于 GitHub pages 部署，通常是 '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs/',
 
   // GitHub pages 部署配置
   // 如果你不使用 GitHub pages，则不需要这些配置
@@ -48,7 +48,7 @@ const config: Config = {
           // 移除此配置可移除"编辑此页面"链接
           editUrl:
             'https://github.com/DigitalChinaOpenSource/oadin-docs/tree/main/',
-          routeBasePath: 'docs',
+          routeBasePath: '/',
           path: 'docs',
         },
         blog: false,
@@ -63,11 +63,11 @@ const config: Config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        // 将 /docs 路径重定向到 /docs/build-deployment
+        // 将根路径重定向到 build-deployment
         redirects: [
           {
-            from: '/docs',
-            to: '/docs/build-deployment',
+            from: '/',
+            to: '/build-deployment',
           },
         ],
       },
@@ -87,7 +87,7 @@ const config: Config = {
         indexDocs: true,
         indexBlog: false,
         indexPages: false,
-        docsRouteBasePath: "/docs",
+        docsRouteBasePath: "/",
         searchBarPosition: "right"
       },
     ],
@@ -125,7 +125,7 @@ const config: Config = {
           items: [
             {
               label: '快速开始',
-              to: '/docs/build-deployment',
+              to: '/build-deployment',
             },
           ],
         },
