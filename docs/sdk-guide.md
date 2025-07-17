@@ -2,21 +2,21 @@
 
 > 本文档介绍如何在 .NET（C#）和 Node.js 项目中集成和使用 Oadin（奥丁模型框架）SDK。
 
-## 目录
+## 📋 目录
 
-- [DotnetLib（C#）](#dotnetlibc)
-  - [安装本地 NuGet 包](#安装本地-nuget-包)
-  - [基本用法](#基本用法)
-- [NodeLib（Node.js）](#nodelibnodejs)
+- [📦 DotnetLib（C#）](#dotnetlibc)
+  - [⬇️ 安装本地 NuGet 包](#安装本地-nuget-包)
+  - [🚀 基本用法](#基本用法)
+- [💚 NodeLib（Node.js）](#nodelibnodejs)
   - [安装](#安装)
   - [基本用法](#基本用法-1)
 - [进阶功能](#进阶功能)
 - [常见 API 示例](#常见-api-示例)
 - [更多示例与高级用法](#更多示例与高级用法)
 
-# DotnetLib（C#）
+# 📦 DotnetLib（C#）
 
-### 安装本地 NuGet 包
+### ⬇️ 安装本地 NuGet 包
 
 1. 打包 NuGet 包
    ```bash
@@ -261,9 +261,9 @@ Console.WriteLine($"Oadin 已下载: {isExisted}");
 
 ---
 
-# NodeLib（Node.js）
+# 💚 NodeLib（Node.js）
 
-### 安装
+### ⬇️ 安装
 
 在 Node 项目中安装本地 tgz 包：
 
@@ -271,7 +271,7 @@ Console.WriteLine($"Oadin 已下载: {isExisted}");
 npm install oadin-lib-1.2.67.tgz
 ```
 
-### 基本用法
+### 🚀 基本用法
 
 以下示例展示了 Oadin Node.js SDK 的完整使用流程，从初始化到各种 AI 服务的调用：
 
@@ -458,7 +458,7 @@ oadin.TextToImage(t2iData).then(console.log);
 
 Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 服务。以下为主要进阶能力及用法示例：
 
-## 1. 服务/模型的安装、更新与删除
+## 1️⃣ 服务/模型的安装、更新与删除
 
 - **安装服务**：参考上文“安装服务”章节，可通过 `InstallServiceAsync` (C#) 或 `CreateService` (Node.js) 安装服务。
 - **安装模型**：
@@ -484,7 +484,7 @@ Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 
     ```
 - **删除模型/服务**：同理，调用 `DeleteModelAsync` 或 `DeleteServiceProviderAsync` 等接口。
 
-## 2. 流式响应与回调
+## 2️⃣ 流式响应与回调
 
 - **C# 流式 Chat**：
   ```csharp
@@ -511,7 +511,7 @@ Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 
   });
   ```
 
-## 3. 配置导入/导出与一键部署
+## 3️⃣ 配置导入/导出与一键部署
 
 - **导入配置**：
   - C#：`ImportConfigAsync("path/to/.oadin")`
@@ -521,7 +521,7 @@ Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 
   - Node.js：`oadin.ExportConfig({ ... })`
 - **一键部署**：将 `.oadin` 文件随应用分发，目标环境导入即可自动安装所有服务和模型。
 
-## 4. 主要参数说明
+## 4️⃣ 主要参数说明
 
 | 参数名              | 说明                       | 示例值                      |
 |---------------------|----------------------------|-----------------------------|
@@ -538,7 +538,7 @@ Oadin SDK 支持丰富的进阶功能，帮助开发者灵活集成和扩展 AI 
 | messages            | 聊天消息数组               | `[{role: "user", ...}]`        |
 | input/prompt        | 输入内容                   | "你好"/"一只猫"               |
 
-## 5. 进阶用法与最佳实践
+## 5️⃣ 进阶用法与最佳实践
 
 - 推荐将服务、模型、Provider 配置写入 `.oadin` 文件，便于团队协作和环境迁移。
 - 流式接口建议配合前端事件流或后端回调处理，提升用户体验。
@@ -594,7 +594,7 @@ Content-Type: application/json
 
 ---
 
-## 更多示例与高级用法
+## 🔧 更多示例与高级用法
 
 ### 1. 多轮对话与上下文管理
 Oadin 支持多轮对话，`messages` 参数可传递历史消息，实现上下文连续。
