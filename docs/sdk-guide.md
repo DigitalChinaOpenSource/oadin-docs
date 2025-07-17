@@ -1,4 +1,4 @@
-# Oadin SDK 使用说明
+# SDK 使用说明
 
 > 本文档介绍如何在 .NET（C#）和 Node.js 项目中集成和使用 Oadin（奥丁模型框架）SDK。
 
