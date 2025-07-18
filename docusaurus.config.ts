@@ -67,7 +67,7 @@ const config: Config = {
         redirects: [
           {
             from: '/',
-            to: '/build-deployment',
+            to: '/architecture',
           },
         ],
       },
@@ -130,24 +130,7 @@ const config: Config = {
           items: [
             {
               label: '快速开始',
-              to: '/build-deployment',
-            },
-          ],
-        },
-        {
-          title: '社区',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              to: '/architecture',
             },
           ],
         },

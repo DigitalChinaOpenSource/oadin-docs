@@ -6,5 +6,5 @@ import {Redirect} from '@docusaurus/router';
  * 自动重定向到文档首页
  */
 export default function Home() {
-  return <Redirect to="/docs/build-deployment" />;
+  return <Redirect to="/docs/architecture" />;
 }
