@@ -31,11 +31,22 @@ const config: Config = {
   // 配置路由重定向，将首页直接跳转到文档页面
 
 
-  // 即使你不使用国际化，也可以使用此字段设置有用的元数据，如 html lang
-  // 例如，如果你的站点是中文的，你可能想将 "en" 替换为 "zh-Hans"
+  // 配置多语言支持
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans', 'en'],
+    localeConfigs: {
+      'zh-Hans': {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-Hans',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en',
+      },
+    },
   },
 
   presets: [
@@ -116,6 +127,10 @@ const config: Config = {
           label: '文档',
         },
         {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        // },
+        // {
           href: 'https://github.com/DigitalChinaOpenSource/oadin-docs',
           label: 'GitHub',
           position: 'right',

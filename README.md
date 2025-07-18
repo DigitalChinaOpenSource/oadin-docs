@@ -228,6 +228,98 @@ pnpm clear && pnpm build
 
 确保文档文件的路径和 `sidebars.ts` 中的配置一致。
 
+## 🌐 多语言支持指南
+
+### 添加英文文档
+
+要为现有中文文档添加英文翻译版本，按照以下步骤操作：
+
+#### 1. 确保已启用多语言配置
+
+首先，确保`docusaurus.config.ts`文件中已正确配置多语言支持：
+
+```typescript
+i18n: {
+  defaultLocale: 'zh-Hans',
+  locales: ['zh-Hans', 'en'],
+  localeConfigs: {
+    'zh-Hans': {
+      label: '简体中文',
+      direction: 'ltr',
+      htmlLang: 'zh-Hans',
+    },
+    en: {
+      label: 'English',
+      direction: 'ltr',
+      htmlLang: 'en',
+    },
+  },
+}
+```
+
+#### 2. 生成翻译文件（如果尚未生成）
+
+```bash
+# 生成英文翻译文件
+pnpm write-translations -- --locale en
+
+# 生成中文翻译文件
+pnpm write-translations -- --locale zh-Hans
+```
+
+这将在`i18n/[locale]`目录下创建必要的翻译文件。
+
+#### 3. 添加英文文档内容
+
+英文文档应放在以下目录：
+
+```
+i18n/en/docusaurus-plugin-content-docs/current/
+```
+
+例如，如果要为`docs/architecture.md`创建英文版本，应创建：
+
+```
+i18n/en/docusaurus-plugin-content-docs/current/architecture.md
+```
+
+#### 4. 翻译UI组件文本
+
+网站界面元素的翻译位于：
+
+- 导航栏翻译：`i18n/en/docusaurus-theme-classic/navbar.json`
+- 页脚翻译：`i18n/en/docusaurus-theme-classic/footer.json`
+- 其他组件翻译：`i18n/en/code.json`
+
+#### 5. 构建并测试
+
+```bash
+# 构建多语言网站
+pnpm build
+
+# 本地预览
+pnpm serve
+```
+
+### 翻译文件结构
+
+翻译文件采用JSON格式，键值对形式表示原文和译文：
+
+```json
+{
+  "link.title.Documentation": {
+    "message": "Documentation",
+    "description": "The title of the footer links column with title=Documentation in the footer"
+  }
+}
+```
+
+### 注意事项
+
+- 确保所有页面元素（导航栏、页脚、按钮等）都有对应的翻译
+- 翻译文档时保持原文格式（标题层级、列表、代码块等）
+- 锚点链接(#)在不同语言之间需要相应调整
+
 ## 📚 相关资源
 
 - [Docusaurus 官方文档](https://docusaurus.io/docs)
